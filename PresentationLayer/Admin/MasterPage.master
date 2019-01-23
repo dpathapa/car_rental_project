@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style3 {
+            color: #99CCFF;
+            background-color: #000000;
+        }
+        .auto-style4 {
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+        .auto-style5 {
+            color: #99CCFF;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="auto-style1">
+          <table class="auto-style2">
+                <tr>
+                    <td class="auto-style3">
+                        <h1>Banger &amp; Co Rentals Company</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+          
+        
+        </asp:ContentPlaceHolder></td>
+                </tr>
+                <td height="50px" width="100%" class="auto-style4">
+                    <span class="auto-style5">
+                    <br />
+                    12 Church Street, Birmingham B45 6RY</span><br />
+                    <span class="auto-style5">Contact: 01256789098/ email: </span><span class="auto-style8"><a href="mailto:write2banger@gmai.co.uk"><span class="auto-style5">write2banger@gmail.co.uk</span></a></span><br class="auto-style8" />
+                </td>
+            </table>
+       
+       
+    </div>
+    </form>
+</body>
+</html>
