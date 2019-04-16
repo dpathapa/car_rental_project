@@ -50,6 +50,18 @@
             text-align: left;
             height: 64px;
         }
+         .auto-style25 {
+             width: 477px;
+             text-align: right;
+             color: #99CCFF;
+             background-color: #000000;
+             height: 54px;
+         }
+         .auto-style26 {
+             background-color: #000000;
+             text-align: left;
+             height: 54px;
+         }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -93,8 +105,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style17">Return Date:</td>
-                <td class="auto-style16">
+                <td class="auto-style25">Return Date:</td>
+                <td class="auto-style26">
                     <asp:TextBox ID="txtReturn" runat="server" CssClass="auto-style18" format="dd/MM/yyyy" TextMode="Date"></asp:TextBox>
                 <asp:CompareValidator ID="cmpVal1" ControlToCompare="txtStart" 
          ControlToValidate="txtReturn" Type="Date" Operator="GreaterThanEqual"   

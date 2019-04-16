@@ -6,17 +6,35 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 public partial class Customers_BookAcar : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        lbl1.Text = "Hello, " + Session["Cid"].ToString();
+        lbl1.Text = "Hello, " + Session["Userid"].ToString();
         
         if (!IsPostBack)
         {
+            /*string DateInString = DateTime.Now.AddHours(5).ToString("dd/MM/yyyy");
+            DateTime start_date = DateTime.Parse(DateInString);
+            DateTime return_date =start_date.AddDays(14);
+            if(DateTime.Now > return_date) {
+                Response.Write("invalid Date picked");
 
-            cmpStart.ValueToCompare = DateTime.Now.ToString("dd/MM/yyyy");
-            cmpVal1.Validate();
+            }*/
+
+            //txtStart.Text = DateTime.Now.AddHours(5).ToString("dd/MM/yyyy");
+
+             cmpStart.ValueToCompare = DateTime.Today.AddHours(5).ToString("dd/MM/yyyy");
+             cmpStart.Validate();
+            
+
+            //  Debug.WriteLine(txtStart.Text);
+            //  DateTime parsedDate = DateTime.Parse(txtStart.Text.ToString()).AddDays(14);
+            //   txtReturn.Text = parsedDate.ToString("dd/MM/yyyy");
+
+            // cmpVal1.Validate();
+
 
 
             DataTable dt = new DataTable();

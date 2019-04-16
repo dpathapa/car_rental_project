@@ -27,7 +27,7 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@Firstname", Cp.Firstname);
                 cmd.Parameters.AddWithValue("@Lastname", Cp.Lastname);
                 cmd.Parameters.AddWithValue("@Gender", Cp.Gender);
-                cmd.Parameters.AddWithValue("@Birthdate",Cp.Birthdate);
+                cmd.Parameters.AddWithValue("@Age",Cp.Age);
                 cmd.Parameters.AddWithValue("@Address",Cp.Address);
                 cmd.Parameters.AddWithValue("@Phone",Cp.Phone_no);
                 cmd.Parameters.AddWithValue("@Email",Cp.Email);

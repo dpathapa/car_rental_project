@@ -1,1 +1,0 @@
-﻿SELECT V.Vid,V.Vehicle_reg,V.Vehicle_make,V.Vehicle_type,V.Vehicle_category,V.Vehicle_capacity,V.Cost_per_day,V.Vehicle_Status, B.Booking_date, B.Start_date,B.Return_date FROM VehicleTble V CROSS JOIN BookingsTble B WHERE V.Vid = B.Vid;

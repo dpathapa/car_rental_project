@@ -44,7 +44,8 @@ public partial class Customers_ConfirmBooking : System.Web.UI.Page
         SqlCommand cmd1 = new SqlCommand();
 
         string VehicleId = Request.QueryString["id"].ToString();
-        string updateBooking = "insert into BookingsTble(Booking_date,Start_date ,Return_date,C_id,Vid)VALUES ('" + Booking_date + "','" + startdt + "','" + enddt + "', 511, " + VehicleId + ")";
+        string C_id = Session["C_id"].ToString();
+        string updateBooking = "insert into BookingsTble(Booking_date,Start_date ,Return_date,C_id,Vid)VALUES ('" + Booking_date + "','" + startdt  + "','" + enddt+ "','" + C_id + "','" + VehicleId + "')";
         cmd1.CommandText = updateBooking;
         cmd1.Connection = s;
         s.Open();

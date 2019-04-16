@@ -36,6 +36,10 @@
             font-size: x-small;
             color: #FF0000;
         }
+        .auto-style9 {
+            color: #FF3300;
+            font-size: x-small;
+        }
     </style>
 </head>
 <body>
@@ -71,10 +75,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Birthdate:</td>
+                    <td class="auto-style2">Age:</td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="txtDob" runat="server" TextMode="Date"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="valDob" runat="server" ControlToValidate="txtDob" CssClass="auto-style8" Display="Dynamic" ErrorMessage="&quot;Date of Birth&quot;"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="valAge" runat="server" ControlToValidate="txtAge" CssClass="auto-style8" ErrorMessage="&quot;must be 18 -70&quot;" MaximumValue="70" MinimumValue="18" Type="Integer"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -108,14 +112,16 @@
                 <tr>
                     <td class="auto-style2">Licence issue date:</td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="txtIssue" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="txtIssue" runat="server" TextMode="Date" format="dd/MM/yyyy"></asp:TextBox>
+                        <span class="auto-style18">&nbsp;<asp:CompareValidator ID="cmpLissue" runat="server" ControlToValidate="txtIssue" CssClass="auto-style9" Display="Dynamic" ErrorMessage="&quot;must be less than today's date&quot;" Operator="LessThan" Type="Date"></asp:CompareValidator>
+                    </span></td>
                         <asp:RequiredFieldValidator ID="valissue" runat="server" ControlToValidate="txtIssue" CssClass="auto-style6" Display="Dynamic" ErrorMessage="*"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Licence expire date:</td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="txtExpire" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="txtExpire" runat="server" TextMode="Date" format="dd/MM/yyyy"></asp:TextBox>
                         <asp:CompareValidator ID="comValexpire" runat="server" ControlToCompare="txtIssue" ControlToValidate="txtExpire" CssClass="auto-style13" Display="Dynamic" ErrorMessage="&quot;Expiry date must be greater than issue date&quot;" Operator="GreaterThan" style="color: #FF0000; font-size: x-small" Type="Date"></asp:CompareValidator>
                     </td>
                 </tr>
